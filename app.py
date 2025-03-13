@@ -104,6 +104,8 @@ with st.expander('📝 Corrección de Texto en Inglés'):
         corrected_text = blob2.correct()
         st.write('✅ **Texto corregido:**', corrected_text)
 
-with open("Animation.json") as source:
-  animation=json.load(source)
-st.lottie(animation, width=350)
+
+with open("Animation.json", "r") as f:
+    animacion = json.load(f)
+
+st_lottie(animacion, height=300, key="lottie_animacion")
