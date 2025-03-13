@@ -22,7 +22,8 @@ with st.sidebar:
 with st.expander('Envuesta de satisfaccion'):
   image = Image.open("cliente(1).jpg")
   st.image(image, caption="cliente(1)")
-    text1 = st.text_area('Escribe por favor: ')
+    
+  text1 = st.text_area('Escribe por favor: ')
     if text1:
 
         #translation = translator.translate(text1, src="es", dest="en")
