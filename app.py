@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 import json
+import streamlit_lottie
 from PIL import Image
 from textblob import TextBlob
 from googletrans import Translator
