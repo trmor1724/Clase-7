@@ -19,10 +19,12 @@ st.title("🔍 Análisis de Sentimiento con TextBlob")
 # Sidebar con explicación
 with st.sidebar:
     st.subheader("📌 ¿Qué significa el análisis de sentimiento?")
-    st.markdown("""
-    - **Polaridad**: Rango de -1 (muy negativo) a 1 (muy positivo).
-    - **Subjetividad**: Rango de 0 (objetivo) a 1 (subjetivo).
-    """)
+    st.markdown(
+        """
+        - **Polaridad**: Rango de -1 (muy negativo) a 1 (muy positivo).
+        - **Subjetividad**: Rango de 0 (objetivo) a 1 (subjetivo).
+        """
+    )
 
 # Cargar imagen de portada
 try:
@@ -35,8 +37,8 @@ except:
 translator = Translator()
 
 # Sección de análisis de sentimiento
-with st.expander('💬 Analizar Sentimiento de un Texto'):
-    text1 = st.text_area('✍️ Escribe una frase:', placeholder="Ejemplo: Me encanta este producto")
+with st.expander("💬 Analizar Sentimiento de un Texto"):
+    text1 = st.text_area("✍️ Escribe una frase:", placeholder="Ejemplo: Me encanta este producto")
     
     if text1:
         try:
@@ -50,34 +52,27 @@ with st.expander('💬 Analizar Sentimiento de un Texto'):
             subjectivity = round(blob.sentiment.subjectivity, 2)
 
             # Mostrar resultados
-            st.write('📊 **Polaridad:**', polarity)
-            st.write('🧐 **Subjetividad:**', subjectivity)
+            st.write("📊 **Polaridad:**", polarity)
+            st.write("🧐 **Subjetividad:**", subjectivity)
 
             # Interacción basada en el sentimiento
             if polarity >= 0.5:
-                st.success('😊 ¡El sentimiento es positivo! ¡Sigue disfrutando!')
+                st.success("😊 ¡El sentimiento es positivo! ¡Sigue disfrutando!")
             elif polarity <= -0.5:
-                st.error('😔 El sentimiento es negativo. ¿Podemos mejorar algo?')
+                st.error("😔 El sentimiento es negativo. ¿Podemos mejorar algo?")
             else:
-                st.warning('😐 Es un sentimiento neutral. ¿Algo más que quieras compartir?')
+                st.warning("😐 Es un sentimiento neutral. ¿Algo más que quieras compartir?")
         except Exception as e:
             st.error(f"❌ Error al traducir o analizar el texto: {e}")
 
 # Sección de corrección de texto en inglés
-with st.expander('📝 Corrección de Texto en Inglés'):
-    text2 = st.text_area('✍️ Escribe un texto para corregir:', key='correction')
+with st.expander("📝 Corrección de Texto en Inglés"):
+    text2 = st.text_area("✍️ Escribe un texto para corregir:", key="correction")
     if text2:
         blob2 = TextBlob(text2)
         corrected_text = blob2.correct()
-        st.write('✅ **Texto corregido:**', corrected_text)
+        st.write("✅ **Texto corregido:**", corrected_text)
 
 # Pie de página
 st.markdown("---")
 st.markdown("Desarrollado con ❤️ usando Streamlit y TextBlob")
-
-    """)
-
-# Pie de página
-st.markdown("---")
-st.markdown("Desarrollado con ❤️ usando Streamlit y TextBlob")
-
