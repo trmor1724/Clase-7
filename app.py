@@ -1,9 +1,10 @@
 import streamlit as st
 import os
-from streamlit_lottie import json
+import json
 from PIL import Image
 from textblob import TextBlob
 from googletrans import Translator
+from streamlit_lottie import st_lottie
 
 translator = Translator()
 st.title('Analisis de satifaccion')
