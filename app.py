@@ -43,4 +43,6 @@ with st.expander('Corrección en inglés'):
        text2 = st.text_area('Escribe por favor: ',key='4')
        if text2:
           blob2=TextBlob(text2)
-          st.write((blob2.correct())) 
+          st.write((blob2.correct()))
+
+
