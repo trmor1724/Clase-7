@@ -1,9 +1,7 @@
-import streamlit as st
-from textblob import TextBlob
-from googletrans import Translator
-
 translator = Translator()
-st.title('Uso de textblob')
+st.title('Analisis de satifaccion')
+image = Image.open("cliente(1).jpg")
+st.image(image, caption="cliente(1)")
 
 st.subheader("Por favor escribe en el campo de texto la frase que deseas analizar")
 with st.sidebar:
@@ -19,13 +17,9 @@ with st.sidebar:
                ) 
 
 
-with st.expander('Envuesta de satisfaccion'):
-  image = Image.open("cliente(1).jpg")
-  st.image(image, caption="cliente(1)")
-    
-  text1 = st.text_area('Escribe por favor: ')
-    
-      if text1:
+with st.expander('Analizar Polaridad y Subjetividad en un texto'):
+    text1 = st.text_area('Escribe por favor: ')
+    if text1:
 
         #translation = translator.translate(text1, src="es", dest="en")
         #trans_text = translation.text
@@ -47,6 +41,4 @@ with st.expander('Corrección en inglés'):
        text2 = st.text_area('Escribe por favor: ',key='4')
        if text2:
           blob2=TextBlob(text2)
-          st.write((blob2.correct()))
-
-
+          st.write((blob2.correct()))                  
