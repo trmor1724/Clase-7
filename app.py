@@ -1,3 +1,8 @@
+import streamlit as st
+from PIL import Image
+from textblob import TextBlob
+from googletrans import Translator
+
 translator = Translator()
 st.title('Analisis de satifaccion')
 image = Image.open("cliente(1).jpg")
