@@ -19,7 +19,9 @@ with st.sidebar:
                ) 
 
 
-with st.expander('Analizar Polaridad y Subjetividad en un texto'):
+with st.expander('Envuesta de satisfaccion'):
+  image = Image.open("cliente.jpg")
+c st.image(image, caption="cliente")
     text1 = st.text_area('Escribe por favor: ')
     if text1:
 
