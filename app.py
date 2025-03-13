@@ -20,8 +20,8 @@ with st.sidebar:
 
 
 with st.expander('Envuesta de satisfaccion'):
-  image = Image.open("cliente.jpg")
-c st.image(image, caption="cliente")
+  image = Image.open("cliente(1).jpg")
+  st.image(image, caption="cliente(1)")
     text1 = st.text_area('Escribe por favor: ')
     if text1:
 
