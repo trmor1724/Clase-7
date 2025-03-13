@@ -1,5 +1,6 @@
 import streamlit as st
 import os
+from streamlit_lottie import json
 from PIL import Image
 from textblob import TextBlob
 from googletrans import Translator
@@ -103,3 +104,6 @@ with st.expander('📝 Corrección de Texto en Inglés'):
         corrected_text = blob2.correct()
         st.write('✅ **Texto corregido:**', corrected_text)
 
+with open("graficos.jason") as source:
+  animation=json.load(source)
+st.lottie(animation, width=350
