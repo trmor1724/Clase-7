@@ -1,7 +1,7 @@
 streamlit
-#nltk
-textblob==0.17.1
-gTTS==2.2.2
-googletrans==3.1.0a0
-pip install streamlit-lottie
-
+numpy
+pandas
+textblob
+googletrans==4.0.0-rc1
+Pillow
+streamlit-lottie
