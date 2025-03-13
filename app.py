@@ -24,7 +24,8 @@ with st.expander('Envuesta de satisfaccion'):
   st.image(image, caption="cliente(1)")
     
   text1 = st.text_area('Escribe por favor: ')
-    if text1:
+    
+      if text1:
 
         #translation = translator.translate(text1, src="es", dest="en")
         #trans_text = translation.text
