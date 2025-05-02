@@ -10,6 +10,7 @@ from streamlit_lottie import st_lottie
 translator = Translator()
 st.title('Analisis de satifaccion')
 image = Image.open("cliente.jpg")
+st.image(image, caption="Cliente")
 
 
 st.subheader("Por favor escribe en el campo de texto la frase que deseas analizar")
